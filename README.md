@@ -6,7 +6,24 @@
 
 - Using pip, install the required dependencies:
 
-    ```pip3.7 install --user -r requirements.txt```
+    ```$ pip3.7 install --user -r requirements.txt```
+    
+## Setup submodules:
+
+- ```$ git submodule update --init --recursive```
+- Install HTML-APTED Requirements
+- Install JSPatcher Requirements
+
+and then run:
+```
+$ cd HTML-APTED
+$ gradle build
+$ cd ..
+
+$ cd JSPatcher
+$ tsc
+$ cd ..
+```
 
 ## Run:
 
@@ -17,13 +34,13 @@ There are three different use cases for this project:
 To generate Fawkes static template using two different versions of HTML files:
 
 ```
-python3.7 treematching/run_apted.py first_html second_html out_path
+$ python3.7 treematching/run_apted.py first_html second_html out_path
 ```
 The third argument is the path to the generated static template.
 
 ### Fawkes Dynamic Patch (Online phase):
 ```
-python3.7 treematching/run_apted.py first_html second_html out_path json
+$ python3.7 treematching/run_apted.py first_html second_html out_path json
 ```
 The third argument is the path to the generated dynamic patch, which is a json file. The last argument must be "json".
 
@@ -31,5 +48,5 @@ The third argument is the path to the generated dynamic patch, which is a json f
 ### Similarity Analysis (Motivation):
 We compute a similarity metric for the two given HTML files as a percentage of shared paths.
 ```
-python3.7 treematching/similarity.py first_html second_html
+$ python3.7 treematching/similarity.py first_html second_html
 ```
