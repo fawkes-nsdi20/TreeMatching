@@ -1,6 +1,3 @@
 [submodule "HTML-APTED"]
 	path = HTML-APTED
 	url = git@github.com:fawkes-nsdi20/HTML-APTED.git
-[submodule "JSPatcher"]
-	path = JSPatcher
-	url = git@github.com:fawkes-nsdi20/JSPatcher.git
